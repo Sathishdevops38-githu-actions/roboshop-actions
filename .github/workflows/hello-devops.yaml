@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v4  # Uses a community action to "copy" your code to the VM
       
       - name: List all files and dircetories
-        uses: ls -la
+        run: ls -la
 
       - name: Say hello            # STEP 2
         run: echo "Hello, I am automating with GitHub Actions!"

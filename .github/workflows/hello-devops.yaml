@@ -1,4 +1,4 @@
-name: My First Automation          # The name shown in the Actions tab
+name: My First Automation on push trigger         # The name shown in the Actions tab
 on: [push]                         # TRIGGER: Run whenever I push code
 
 jobs:

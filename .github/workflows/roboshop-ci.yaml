@@ -1,9 +1,14 @@
 name: roboshop ci
 on: [push, workflow_dispatch]
 
+# This replaces 'disableConcurrentBuilds()'
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # Global Environment Variables
 env:
-  COURSE: "Jenkins"
+  COURSE: "Actions"
   PROJECT: "roboshop"
   COMPONENT: "catalogue"
   ACC_ID: "441700732169"
@@ -12,6 +17,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # This replaces 'timeout(time: 10, unit: 'MINUTES')'
+    timeout-minutes: 10
     steps:
       - name: Print Version
         run: echo "Deploying $COMPONENT for $PROJECT, $ACC_ID"

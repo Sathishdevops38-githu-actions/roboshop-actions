@@ -1,0 +1,17 @@
+name: roboshop ci
+on: [push, workflow_dispatch]
+
+# Global Environment Variables
+env:
+  COURSE: "Jenkins"
+  PROJECT: "roboshop"
+  COMPONENT: "catalogue"
+  ACC_ID: "441700732169"
+  APP_VERSION: ${{ github.sha }} # Pro-tip: Using the commit hash as a version
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Version
+        run: echo "Deploying $COMPONENT for $PROJECT, $ACC_ID"

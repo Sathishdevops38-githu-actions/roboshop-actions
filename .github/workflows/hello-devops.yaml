@@ -1,0 +1,16 @@
+name: My First Automation          # The name shown in the Actions tab
+on: [push]                         # TRIGGER: Run whenever I push code
+
+jobs:
+  build-and-test:                  # JOB name
+    runs-on: ubuntu-latest         # RUNNER: The virtual machine used
+    
+    steps:                         # The sequence of actions
+      - name: Get code from repo   # STEP 1
+        uses: actions/checkout@v4  # Uses a community action to "copy" your code to the VM
+      
+      - name: List all files and dircetories
+        uses: ls -la
+
+      - name: Say hello            # STEP 2
+        run: echo "Hello, I am automating with GitHub Actions!"

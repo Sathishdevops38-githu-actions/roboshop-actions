@@ -17,6 +17,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: dev
     # This replaces 'timeout(time: 10, unit: 'MINUTES')'
     timeout-minutes: 10
     steps:

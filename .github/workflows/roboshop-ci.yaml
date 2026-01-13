@@ -11,7 +11,7 @@ env:
   COURSE: "Actions"
   PROJECT: ${{ var.PROJECT }} #from github environment variables
   COMPONENT: "catalogue"
-  ACC_ID: ${{ var. ACC_ID }} #from github environment variables
+  ACC_ID: ${{ var.ACC_ID }} #from github environment variables
   APP_VERSION: ${{ github.sha }} # Pro-tip: Using the commit hash as a version
 
 jobs:

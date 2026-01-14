@@ -1,0 +1,12 @@
+# .github/workflows/caller.yml in the source repository
+name:  caller-workflow
+on: [push]
+
+jobs:
+  call-reusable-workflow:
+    uses: Sathishdevops38-githu-actions/roboshop-components/.github/workflows/reusable-workflow.yaml@main
+    with:
+      my_variable: ${{ vars.MY_REPO_VARIABLE }}
+    # if using secrets, you would add:
+    # secrets:
+    #   my_secret: ${{ secrets.MY_REPO_SECRET }}

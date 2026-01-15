@@ -8,7 +8,7 @@ on:
 
 jobs:
   call-reusable-workflow:
-    uses: Sathishdevops38-githu-actions/roboshop-components/.github/workflows/reusable-workflow.yaml@main
+    uses: Sathishdevops38-githu-actions/roboshop-components/.github/workflows/reusable.yaml@main
     with:
       my_variable: ${{ vars.MY_REPO_VARIABLE }}
     # if using secrets, you would add:
